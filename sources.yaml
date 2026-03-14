@@ -1,0 +1,42 @@
+# 节点聚合源配置
+# 添加新源只需追加条目，脚本自动识别 base64/纯文本格式
+# 支持 url_template + date_format 处理动态日期 URL
+
+sources:
+  # --- 大型聚合仓库 ---
+  - name: "NoMoreWalls"
+    url: "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt"
+
+  - name: "free18/v2ray"
+    url: "https://raw.githubusercontent.com/free18/v2ray/main/v.txt"
+
+  - name: "shaoyouvip/free"
+    url: "https://raw.githubusercontent.com/shaoyouvip/free/main/base64.txt"
+
+  - name: "getNode"
+    url: "https://raw.githubusercontent.com/a2470982985/getNode/main/v2ray.txt"
+
+  # --- Barabama/FreeNodes 各子源 ---
+  - name: "Barabama/nodefree"
+    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodefree.txt"
+
+  - name: "Barabama/v2rayshare"
+    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/v2rayshare.txt"
+
+  - name: "Barabama/wenode"
+    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/wenode.txt"
+
+  - name: "Barabama/ndnode"
+    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/ndnode.txt"
+
+  - name: "Barabama/yudou66"
+    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt"
+
+  # --- 动态日期源 ---
+  - name: "v2rayfree/AM"
+    url_template: "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v{date}1"
+    date_format: "%Y%m%d"
+
+  - name: "v2rayfree/PM"
+    url_template: "https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v{date}2"
+    date_format: "%Y%m%d"
