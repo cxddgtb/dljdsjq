@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-03-14 12:39:55",
-  "total_fetched": 402,
-  "unique_nodes": 337,
-  "alive_nodes": 195,
+  "updated_at": "2026-03-14 18:30:55",
+  "total_fetched": 404,
+  "unique_nodes": 339,
+  "alive_nodes": 200,
   "country_stats": {
     "AT": 1,
     "CA": 1,
     "CLOUDFLARE": 39,
-    "DE": 54,
+    "DE": 55,
     "ES": 1,
-    "FI": 1,
-    "GB": 5,
+    "GB": 6,
     "GOOGLE": 1,
     "HK": 8,
-    "IS": 2,
+    "IS": 1,
     "JP": 16,
-    "KR": 28,
+    "KR": 32,
     "LV": 1,
     "NL": 8,
+    "NO": 1,
     "PL": 2,
     "SG": 7,
     "TR": 1,
@@ -27,7 +27,7 @@
   "sources": [
     {
       "name": "AutoMergePublicNodes",
-      "count": 58,
+      "count": 59,
       "status": "ok"
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Pawdroid/sub",
-      "count": 7,
+      "count": 8,
       "status": "ok"
     }
   ]
