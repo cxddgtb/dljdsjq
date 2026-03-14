@@ -1,74 +1,35 @@
 {
-  "updated_at": "2026-03-14 06:39:51",
-  "total_fetched": 1119,
-  "unique_nodes": 793,
-  "alive_nodes": 585,
+  "updated_at": "2026-03-14 11:46:15",
+  "total_fetched": 402,
+  "unique_nodes": 337,
+  "alive_nodes": 192,
   "country_stats": {
-    "AE": 1,
-    "AL": 4,
-    "AT": 6,
-    "AU": 1,
-    "BY": 2,
-    "CA": 4,
-    "CH": 6,
-    "CLOUDFLARE": 157,
-    "CY": 4,
-    "CZ": 1,
-    "DE": 75,
-    "EE": 10,
-    "ES": 2,
-    "FI": 2,
-    "FR": 6,
-    "GB": 6,
-    "GOOGLE": 3,
-    "HK": 33,
-    "HU": 2,
-    "IE": 1,
-    "IL": 1,
-    "IN": 3,
-    "JP": 34,
-    "KR": 47,
-    "KZ": 1,
-    "LT": 1,
-    "LV": 2,
-    "MY": 1,
-    "NL": 22,
-    "NO": 2,
-    "PL": 10,
-    "PT": 1,
-    "RU": 16,
-    "SA": 1,
-    "SC": 5,
-    "SE": 4,
-    "SG": 14,
-    "TH": 3,
-    "TR": 6,
-    "UA": 1,
-    "US": 71,
-    "VN": 4,
-    "ZA": 4,
-    "XX": 5
+    "AL": 1,
+    "AT": 1,
+    "CA": 1,
+    "CLOUDFLARE": 38,
+    "DE": 54,
+    "ES": 1,
+    "GB": 4,
+    "GOOGLE": 1,
+    "HK": 8,
+    "IS": 1,
+    "JP": 16,
+    "KR": 27,
+    "LV": 1,
+    "NL": 8,
+    "NO": 1,
+    "PL": 2,
+    "SG": 7,
+    "TR": 1,
+    "US": 17,
+    "VN": 2
   },
   "sources": [
     {
-      "name": "NoMoreWalls",
-      "count": 59,
+      "name": "AutoMergePublicNodes",
+      "count": 58,
       "status": "ok"
-    },
-    {
-      "name": "free18/v2ray",
-      "count": 364,
-      "status": "ok"
-    },
-    {
-      "name": "shaoyouvip/free",
-      "count": 23,
-      "status": "ok"
-    },
-    {
-      "name": "getNode",
-      "count": 0,
-      "status": "failed"
     },
     {
       "name": "Barabama/nodefree",
@@ -96,13 +57,23 @@
       "status": "ok"
     },
     {
-      "name": "v2rayfree/AM",
-      "count": 168,
+      "name": "proxypool/clash-meta",
+      "count": 0,
       "status": "ok"
     },
     {
-      "name": "v2rayfree/PM",
-      "count": 168,
+      "name": "proxypool/clash-meta-2",
+      "count": 0,
+      "status": "ok"
+    },
+    {
+      "name": "clashfree/daily",
+      "count": 0,
+      "status": "ok"
+    },
+    {
+      "name": "Pawdroid/sub",
+      "count": 7,
       "status": "ok"
     }
   ]
