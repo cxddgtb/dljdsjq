@@ -1,0 +1,62 @@
+{
+  "updated_at": "2026-03-14 05:39:37",
+  "total_fetched": 1119,
+  "unique_nodes": 793,
+  "sources": [
+    {
+      "name": "NoMoreWalls",
+      "count": 59,
+      "status": "ok"
+    },
+    {
+      "name": "free18/v2ray",
+      "count": 364,
+      "status": "ok"
+    },
+    {
+      "name": "shaoyouvip/free",
+      "count": 23,
+      "status": "ok"
+    },
+    {
+      "name": "getNode",
+      "count": 0,
+      "status": "failed"
+    },
+    {
+      "name": "Barabama/nodefree",
+      "count": 26,
+      "status": "ok"
+    },
+    {
+      "name": "Barabama/v2rayshare",
+      "count": 26,
+      "status": "ok"
+    },
+    {
+      "name": "Barabama/wenode",
+      "count": 26,
+      "status": "ok"
+    },
+    {
+      "name": "Barabama/ndnode",
+      "count": 14,
+      "status": "ok"
+    },
+    {
+      "name": "Barabama/yudou66",
+      "count": 245,
+      "status": "ok"
+    },
+    {
+      "name": "v2rayfree/AM",
+      "count": 168,
+      "status": "ok"
+    },
+    {
+      "name": "v2rayfree/PM",
+      "count": 168,
+      "status": "ok"
+    }
+  ]
+}
