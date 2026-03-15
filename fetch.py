@@ -33,6 +33,7 @@ TCP_CONCURRENCY = 200
 TCP_TIMEOUT = 3
 FETCH_TIMEOUT = 15
 FETCH_WORKERS = 8
+MAX_CDN_NODES = 30  # 每个 CDN 提供商最多保留节点数
 
 
 # ===== 数据源抓取 =====
@@ -372,6 +373,15 @@ def classify_and_rename(nodes, reader):
                 cc = _get_country(ip, reader)
         buckets[cc].append(node)
 
+    # CDN 限流：code 超过 2 字符的是 CDN 提供商（CLOUDFLARE/FASTLY 等）
+    cdn_trimmed = 0
+    for cc in list(buckets):
+        if len(cc) > 2 and cc != 'XX':
+            original = len(buckets[cc])
+            if original > MAX_CDN_NODES:
+                buckets[cc] = buckets[cc][:MAX_CDN_NODES]
+                cdn_trimmed += original - MAX_CDN_NODES
+
     renamed = []
     country_stats = {}
     for cc in sorted(buckets, key=lambda c: ('ZZZ' if c == 'XX' else c)):
@@ -380,6 +390,9 @@ def classify_and_rename(nodes, reader):
         for i, node in enumerate(buckets[cc], 1):
             proto = get_protocol_name(node)
             renamed.append(_rename_node(node, f'{flag} {cc} | {proto} | {i:02d}'))
+
+    if cdn_trimmed:
+        print(f'  CDN 限流: 裁剪 {cdn_trimmed} 个冗余 CDN 节点 (每提供商上限 {MAX_CDN_NODES})')
 
     return renamed, country_stats
 
