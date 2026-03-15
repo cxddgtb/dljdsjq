@@ -123,13 +123,136 @@ def parse_nodes(content):
             nodes.append(line)
     if nodes:
         return nodes
+    # 尝试 base64 解码
     decoded = decode_base64(content)
     if decoded:
         for line in decoded.splitlines():
             line = line.strip()
             if is_node(line):
                 nodes.append(line)
+    if nodes:
+        return nodes
+    # 尝试 Clash YAML 解析
+    return _parse_clash_yaml(content)
+
+
+def _parse_clash_yaml(content):
+    """从 Clash YAML 配置中提取代理并转为 URI"""
+    try:
+        data = yaml.safe_load(content)
+    except Exception:
+        return []
+    if not isinstance(data, dict):
+        return []
+    proxies = data.get('proxies', [])
+    if not proxies:
+        return []
+
+    nodes = []
+    for p in proxies:
+        if not isinstance(p, dict):
+            continue
+        uri = _clash_proxy_to_uri(p)
+        if uri:
+            nodes.append(uri)
     return nodes
+
+
+def _clash_proxy_to_uri(p):
+    """将单个 Clash 代理字典转为 URI 字符串"""
+    ptype = p.get('type', '').lower()
+    server = p.get('server', '')
+    port = p.get('port', 0)
+    name = quote(str(p.get('name', '')), safe='')
+    if not server or not port:
+        return None
+
+    if ptype == 'vmess':
+        info = {
+            'v': '2', 'ps': p.get('name', ''),
+            'add': server, 'port': str(port),
+            'id': p.get('uuid', ''), 'aid': str(p.get('alterId', 0)),
+            'scy': p.get('cipher', 'auto'), 'net': p.get('network', 'tcp'),
+            'type': 'none', 'tls': 'tls' if p.get('tls') else '',
+        }
+        ws = p.get('ws-opts', {})
+        if ws:
+            info['path'] = ws.get('path', '/')
+            info['host'] = ws.get('headers', {}).get('Host', '')
+        if p.get('servername'):
+            info['sni'] = p['servername']
+        return 'vmess://' + base64.b64encode(
+            json.dumps(info, ensure_ascii=False).encode()).decode()
+
+    if ptype == 'vless':
+        params = _build_clash_params(p)
+        flow = p.get('flow', '')
+        if flow:
+            params['flow'] = flow
+        return f"vless://{p.get('uuid', '')}@{server}:{port}?{_urlencode(params)}#{name}"
+
+    if ptype == 'trojan':
+        params = _build_clash_params(p)
+        return f"trojan://{p.get('password', '')}@{server}:{port}?{_urlencode(params)}#{name}"
+
+    if ptype == 'ss':
+        method = p.get('cipher', 'aes-256-gcm')
+        pwd = p.get('password', '')
+        userinfo = base64.b64encode(f'{method}:{pwd}'.encode()).decode()
+        return f"ss://{userinfo}@{server}:{port}#{name}"
+
+    if ptype in ('ssr', 'hysteria2', 'hy2'):
+        # 简单支持
+        if ptype == 'ssr':
+            return None  # SSR 格式复杂，跳过
+        pwd = p.get('password', p.get('auth', ''))
+        params = {}
+        if p.get('sni'):
+            params['sni'] = p['sni']
+        if p.get('insecure') or p.get('skip-cert-verify'):
+            params['insecure'] = '1'
+        qs = _urlencode(params)
+        return f"hy2://{pwd}@{server}:{port}?{qs}#{name}"
+
+    return None
+
+
+def _build_clash_params(p):
+    """从 Clash 代理字典构建 URI 查询参数"""
+    params = {}
+    if p.get('tls'):
+        params['security'] = 'tls'
+    if p.get('servername'):
+        params['sni'] = p['servername']
+    if p.get('skip-cert-verify'):
+        params['allowInsecure'] = '1'
+    net = p.get('network', '')
+    if net:
+        params['type'] = net
+    ws = p.get('ws-opts', {})
+    if ws:
+        params['host'] = ws.get('headers', {}).get('Host', '')
+        params['path'] = ws.get('path', '/')
+    grpc = p.get('grpc-opts', {})
+    if grpc:
+        params['serviceName'] = grpc.get('grpc-service-name', '')
+    fp = p.get('client-fingerprint', '')
+    if fp:
+        params['fp'] = fp
+    ro = p.get('reality-opts', {})
+    if ro:
+        params['security'] = 'reality'
+        params['pbk'] = ro.get('public-key', '')
+        params['sid'] = ro.get('short-id', '')
+    flow = p.get('flow', '')
+    if flow:
+        params['flow'] = flow
+    return params
+
+
+def _urlencode(params):
+    """简单 URL 编码"""
+    return '&'.join(f'{k}={quote(str(v), safe="")}' for k, v in params.items() if v)
 
 
 def parse_host_port(uri):
