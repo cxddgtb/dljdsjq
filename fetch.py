@@ -458,6 +458,45 @@ def _country_flag(code):
     return ''.join(chr(0x1F1E6 + ord(c) - ord('A')) for c in code.upper())
 
 
+COUNTRY_NAMES = {
+    'AD': '安道尔', 'AE': '阿联酋', 'AF': '阿富汗', 'AL': '阿尔巴尼亚',
+    'AM': '亚美尼亚', 'AR': '阿根廷', 'AT': '奥地利', 'AU': '澳大利亚',
+    'AZ': '阿塞拜疆', 'BA': '波黑', 'BD': '孟加拉', 'BE': '比利时',
+    'BG': '保加利亚', 'BH': '巴林', 'BO': '玻利维亚', 'BR': '巴西',
+    'BY': '白俄罗斯', 'CA': '加拿大', 'CH': '瑞士', 'CL': '智利',
+    'CN': '中国', 'CO': '哥伦比亚', 'CR': '哥斯达黎加', 'CY': '塞浦路斯',
+    'CZ': '捷克', 'DE': '德国', 'DK': '丹麦', 'EC': '厄瓜多尔',
+    'EE': '爱沙尼亚', 'EG': '埃及', 'ES': '西班牙', 'FI': '芬兰',
+    'FR': '法国', 'GB': '英国', 'GE': '格鲁吉亚', 'GR': '希腊',
+    'HK': '香港', 'HR': '克罗地亚', 'HU': '匈牙利', 'ID': '印尼',
+    'IE': '爱尔兰', 'IL': '以色列', 'IN': '印度', 'IQ': '伊拉克',
+    'IR': '伊朗', 'IS': '冰岛', 'IT': '意大利', 'JP': '日本',
+    'KE': '肯尼亚', 'KG': '吉尔吉斯', 'KH': '柬埔寨', 'KR': '韩国',
+    'KZ': '哈萨克斯坦', 'LA': '老挝', 'LT': '立陶宛', 'LU': '卢森堡',
+    'LV': '拉脱维亚', 'MA': '摩洛哥', 'MD': '摩尔多瓦', 'MK': '北马其顿',
+    'MM': '缅甸', 'MN': '蒙古', 'MO': '澳门', 'MT': '马耳他',
+    'MX': '墨西哥', 'MY': '马来西亚', 'NG': '尼日利亚', 'NL': '荷兰',
+    'NO': '挪威', 'NP': '尼泊尔', 'NZ': '新西兰', 'PA': '巴拿马',
+    'PE': '秘鲁', 'PH': '菲律宾', 'PK': '巴基斯坦', 'PL': '波兰',
+    'PR': '波多黎各', 'PT': '葡萄牙', 'PY': '巴拉圭', 'QA': '卡塔尔',
+    'RO': '罗马尼亚', 'RS': '塞尔维亚', 'RU': '俄罗斯', 'SA': '沙特',
+    'SC': '塞舌尔', 'SE': '瑞典', 'SG': '新加坡', 'SI': '斯洛文尼亚',
+    'SK': '斯洛伐克', 'TH': '泰国', 'TN': '突尼斯', 'TR': '土耳其',
+    'TW': '台湾', 'UA': '乌克兰', 'US': '美国', 'UY': '乌拉圭',
+    'UZ': '乌兹别克', 'VE': '委内瑞拉', 'VN': '越南', 'ZA': '南非',
+    # CDN
+    'CLOUDFLARE': 'CF节点', 'CLOUDFRONT': 'CF-Front',
+    'FASTLY': 'Fastly', 'GOOGLE': 'Google',
+    'AKAMAI': 'Akamai', 'MICROSOFT': '微软',
+    'XX': '未知',
+}
+
+
+def _country_display(cc):
+    """返回中文名称，无映射则原样返回"""
+    return COUNTRY_NAMES.get(cc, cc)
+
+
 def _get_country(ip, reader):
     try:
         data = reader.get(ip)
@@ -509,10 +548,11 @@ def classify_and_rename(nodes, reader):
     country_stats = {}
     for cc in sorted(buckets, key=lambda c: ('ZZZ' if c == 'XX' else c)):
         flag = _country_flag(cc)
+        cn_name = _country_display(cc)
         country_stats[cc] = len(buckets[cc])
         for i, node in enumerate(buckets[cc], 1):
             proto = get_protocol_name(node)
-            renamed.append(_rename_node(node, f'{flag} {cc} | {proto} | {i:02d}'))
+            renamed.append(_rename_node(node, f'{flag} {cn_name} | {proto} | {i:02d}'))
 
     if cdn_trimmed:
         print(f'  CDN 限流: 裁剪 {cdn_trimmed} 个冗余 CDN 节点 (每提供商上限 {MAX_CDN_NODES})')
@@ -555,7 +595,7 @@ async def async_main():
         result, country_stats = classify_and_rename(alive, reader)
         reader.close()
         for cc in sorted(country_stats, key=lambda c: ('ZZZ' if c == 'XX' else c)):
-            print(f'  {_country_flag(cc)} {cc}: {country_stats[cc]}')
+            print(f'  {_country_flag(cc)} {_country_display(cc)}: {country_stats[cc]}')
     else:
         print('\n[5/5] GeoIP 不可用，跳过地区分类')
         result = alive
