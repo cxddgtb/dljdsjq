@@ -35,6 +35,25 @@ FETCH_TIMEOUT = 15
 FETCH_WORKERS = 8
 MAX_CDN_NODES = 30  # 每个 CDN 提供商最多保留节点数
 
+# ChatGPT/OpenAI 封锁国家（基于实测 API 验证 + 已知制裁清单）
+CHATGPT_BLOCKED = {'CN', 'RU', 'BY', 'IR', 'KP', 'CU', 'SY'}
+CDN_CODES = {'CLOUDFLARE', 'CLOUDFRONT', 'FASTLY', 'GOOGLE', 'AKAMAI', 'MICROSOFT', 'XX'}
+
+# 亚洲 ChatGPT 可达地区
+ASIA_CHATGPT = {
+    'JP', 'KR', 'SG', 'TW', 'HK', 'VN', 'TH', 'ID', 'MY', 'IN',
+    'PH', 'KH', 'MN', 'PK', 'BD', 'AE', 'BH', 'SA', 'KZ', 'AU',
+}
+# 美西服务器低延迟友好区域
+US_WEST_FRIENDLY = {'US', 'CA', 'MX', 'JP', 'KR', 'TW', 'VN'}
+# 欧洲 ChatGPT 可达地区
+EUROPE_CHATGPT = {
+    'DE', 'GB', 'FR', 'NL', 'SE', 'FI', 'AT', 'BE', 'BG', 'CH',
+    'CZ', 'DK', 'EE', 'ES', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT',
+    'LT', 'LV', 'MK', 'MT', 'NO', 'PL', 'PT', 'RO', 'SI', 'CY',
+    'MD', 'UA', 'AL',
+}
+
 
 # ===== 数据源抓取 =====
 
@@ -545,23 +564,32 @@ def classify_and_rename(nodes, reader):
                 cdn_trimmed += original - MAX_CDN_NODES
 
     renamed = []
-    us_nodes = []
+    groups = {'us': [], 'chatgpt': [], 'asia': [], 'europe': [], 'us_optimized': []}
     country_stats = {}
     for cc in sorted(buckets, key=lambda c: ('ZZZ' if c == 'XX' else c)):
         flag = _country_flag(cc)
         cn_name = _country_display(cc)
         country_stats[cc] = len(buckets[cc])
+        is_chatgpt_ok = cc not in CHATGPT_BLOCKED and cc not in CDN_CODES
         for i, node in enumerate(buckets[cc], 1):
             proto = get_protocol_name(node)
             new_node = _rename_node(node, f'{flag} {cn_name} | {proto} | {i:02d}')
             renamed.append(new_node)
             if cc == 'US':
-                us_nodes.append(new_node)
+                groups['us'].append(new_node)
+            if cc in US_WEST_FRIENDLY:
+                groups['us_optimized'].append(new_node)
+            if is_chatgpt_ok:
+                groups['chatgpt'].append(new_node)
+            if cc in ASIA_CHATGPT:
+                groups['asia'].append(new_node)
+            if cc in EUROPE_CHATGPT:
+                groups['europe'].append(new_node)
 
     if cdn_trimmed:
         print(f'  CDN 限流: 裁剪 {cdn_trimmed} 个冗余 CDN 节点 (每提供商上限 {MAX_CDN_NODES})')
 
-    return renamed, country_stats, us_nodes
+    return renamed, country_stats, groups
 
 
 # ===== 主流程 =====
@@ -593,11 +621,11 @@ async def async_main():
 
     # 5. 地区分类
     country_stats = {}
-    us_nodes = []
+    groups = {}
     if maxminddb and os.path.exists(GEOIP_DB):
         print(f'\n[5/5] 地区分类...')
         reader = maxminddb.open_database(GEOIP_DB)
-        result, country_stats, us_nodes = classify_and_rename(alive, reader)
+        result, country_stats, groups = classify_and_rename(alive, reader)
         reader.close()
         for cc in sorted(country_stats, key=lambda c: ('ZZZ' if c == 'XX' else c)):
             print(f'  {_country_flag(cc)} {_country_display(cc)}: {country_stats[cc]}')
@@ -615,9 +643,19 @@ async def async_main():
     with open('output/nodes_base64.txt', 'w', encoding='utf-8') as f:
         f.write(b64)
 
-    with open('output/easy_proxy_nodes.txt', 'w', encoding='utf-8') as f:
-        f.write('\n'.join(us_nodes) + '\n')
-    print(f'  easy_proxy (US): {len(us_nodes)} 个节点 -> output/easy_proxy_nodes.txt')
+    # easy_proxy 多分类输出
+    ep_files = {
+        'us':           ('easy_proxy_nodes.txt',         'US'),
+        'us_optimized': ('easy_proxy_us_optimized.txt',  '美西优化'),
+        'chatgpt':      ('easy_proxy_chatgpt.txt',       'ChatGPT可达'),
+        'asia':         ('easy_proxy_asia.txt',           '亚洲'),
+        'europe':       ('easy_proxy_europe.txt',         '欧洲'),
+    }
+    for key, (fname, label) in ep_files.items():
+        nodes = groups.get(key, [])
+        with open(f'output/{fname}', 'w', encoding='utf-8') as f:
+            f.write('\n'.join(nodes) + '\n')
+        print(f'  easy_proxy ({label}): {len(nodes)} 个节点 -> output/{fname}')
 
     stats = {
         'updated_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
