@@ -7,18 +7,6 @@ sources:
   - name: "AutoMergePublicNodes"
     url: "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt"
 
-  - name: "barry-far/V2ray-Config"
-    url: "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_Sub.txt"
-
-  - name: "MatinGhanbari/v2ray-configs"
-    url: "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt"
-
-  - name: "mahdibland/V2RayAggregator"
-    url: "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity"
-
-  - name: "Epodonios/v2ray-configs"
-    url: "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt"
-
   - name: "xyfqzy/free-nodes"
     url: "https://raw.githubusercontent.com/xyfqzy/free-nodes/main/ppt.txt"
 
