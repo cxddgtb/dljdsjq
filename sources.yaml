@@ -3,13 +3,6 @@
 # 支持 url_template + date_format 处理动态日期 URL
 
 sources:
-  # --- 大型聚合仓库 ---
-  - name: "AutoMergePublicNodes"
-    url: "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt"
-
-  - name: "xyfqzy/free-nodes"
-    url: "https://raw.githubusercontent.com/xyfqzy/free-nodes/main/ppt.txt"
-
   # --- Barabama/FreeNodes 各子源 ---
   - name: "Barabama/nodefree"
     url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodefree.txt"
