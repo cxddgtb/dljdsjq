@@ -3,42 +3,6 @@
 # 支持 url_template + date_format 处理动态日期 URL
 
 sources:
-  # --- Barabama/FreeNodes 各子源 ---
-  - name: "Barabama/nodefree"
-    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodefree.txt"
-
-  - name: "Barabama/v2rayshare"
-    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/v2rayshare.txt"
-
-  - name: "Barabama/wenode"
-    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/wenode.txt"
-
-  - name: "Barabama/ndnode"
-    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/ndnode.txt"
-
-  - name: "Barabama/yudou66"
-    url: "https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt"
-
-  # --- 定时更新源 ---
-  - name: "peasoft/NoMoreWalls"
-    url: "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt"
-
-  - name: "mfuu/v2ray"
-    url: "https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray"
-
-  - name: "ermaozi/get_subscribe"
-    url: "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt"
-
-  - name: "yzcjd/jiedian"
-    url: "https://raw.githubusercontent.com/yzcjd/jiedian/main/%40yzcjd"
-
-  # --- proxypool 主聚合源 ---
-  - name: "proxypool/clash-meta"
-    url: "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml"
-
-  - name: "proxypool/clash-meta-2"
-    url: "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml"
-
   # --- clashfree 每日快照 ---
   - name: "clashfree/daily"
     url_template: "https://raw.githubusercontent.com/free-nodes/clashfree/main/clash{date}.yml"
