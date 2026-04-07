@@ -1,116 +1,101 @@
 {
-  "updated_at": "2026-04-06 18:43:01",
-  "total_fetched": 9989,
-  "after_prefilter": 9806,
-  "unique_nodes": 5567,
-  "alive_nodes": 1787,
+  "updated_at": "2026-04-07 01:20:17",
+  "total_fetched": 10212,
+  "after_prefilter": 10028,
+  "unique_nodes": 5459,
+  "alive_nodes": 1993,
   "country_stats": {
-    "AE": 3,
+    "AE": 2,
     "AL": 4,
     "AM": 1,
     "AR": 2,
-    "AT": 13,
-    "AU": 4,
+    "AT": 12,
+    "AU": 5,
     "BE": 1,
     "BG": 5,
     "BH": 1,
     "BO": 1,
     "BR": 3,
     "BY": 1,
-    "CA": 13,
-    "CH": 6,
+    "CA": 16,
+    "CH": 4,
     "CL": 2,
     "CLOUDFLARE": 30,
-    "CN": 1,
+    "CN": 2,
     "CO": 2,
     "CR": 1,
-    "CY": 14,
+    "CY": 9,
     "CZ": 3,
-    "DE": 94,
+    "DE": 87,
     "DK": 2,
     "EC": 1,
-    "EE": 7,
-    "ES": 9,
-    "FASTLY": 12,
+    "EE": 6,
+    "ES": 8,
+    "FASTLY": 9,
     "FI": 10,
-    "FR": 82,
-    "GB": 56,
+    "FR": 84,
+    "GB": 57,
     "GR": 1,
-    "HK": 132,
+    "HK": 135,
     "HR": 1,
-    "HU": 2,
-    "ID": 3,
+    "HU": 1,
+    "ID": 4,
     "IE": 1,
     "IL": 1,
-    "IN": 9,
+    "IN": 10,
     "IQ": 2,
-    "IR": 32,
-    "IT": 3,
-    "JP": 24,
+    "IR": 18,
+    "IT": 4,
+    "JP": 33,
     "KH": 1,
-    "KR": 23,
+    "KR": 29,
     "KZ": 7,
-    "LT": 6,
+    "LT": 5,
     "LV": 15,
-    "MA": 3,
+    "MA": 2,
     "MD": 9,
     "MK": 1,
     "MN": 1,
     "MT": 2,
     "MX": 2,
     "MY": 3,
-    "NL": 83,
-    "NO": 3,
+    "NL": 86,
+    "NO": 4,
     "PA": 2,
     "PE": 3,
     "PK": 3,
-    "PL": 13,
+    "PL": 12,
     "PR": 2,
     "PT": 1,
     "PY": 1,
     "RO": 4,
     "RS": 2,
-    "RU": 15,
+    "RU": 14,
     "SA": 2,
-    "SC": 7,
-    "SE": 9,
-    "SG": 38,
-    "SI": 3,
-    "TR": 11,
-    "TW": 18,
+    "SC": 6,
+    "SE": 8,
+    "SG": 36,
+    "SI": 2,
+    "TR": 8,
+    "TW": 26,
     "UA": 1,
-    "US": 137,
-    "VN": 7,
-    "ZA": 5
+    "US": 149,
+    "VN": 261,
+    "ZA": 4
   },
   "sources": [
     {
-      "name": "MatinGhanbari/v2ray-configs",
-      "count": 3997,
-      "status": "ok"
-    },
-    {
-      "name": "Barabama/v2rayshare",
-      "count": 24,
+      "name": "mahdibland/V2RayAggregator",
+      "count": 200,
       "status": "ok"
     },
     {
       "name": "AutoMergePublicNodes",
-      "count": 36,
+      "count": 33,
       "status": "ok"
     },
     {
-      "name": "barry-far/V2ray-Config",
-      "count": 1886,
-      "status": "ok"
-    },
-    {
-      "name": "Epodonios/v2ray-configs",
-      "count": 2901,
-      "status": "ok"
-    },
-    {
-      "name": "Barabama/nodefree",
+      "name": "Barabama/v2rayshare",
       "count": 24,
       "status": "ok"
     },
@@ -120,8 +105,13 @@
       "status": "ok"
     },
     {
-      "name": "peasoft/NoMoreWalls",
-      "count": 45,
+      "name": "Epodonios/v2ray-configs",
+      "count": 3011,
+      "status": "ok"
+    },
+    {
+      "name": "Barabama/nodefree",
+      "count": 24,
       "status": "ok"
     },
     {
@@ -131,7 +121,7 @@
     },
     {
       "name": "mfuu/v2ray",
-      "count": 66,
+      "count": 217,
       "status": "ok"
     },
     {
@@ -140,13 +130,8 @@
       "status": "ok"
     },
     {
-      "name": "xyfqzy/free-nodes",
-      "count": 0,
-      "status": "ok"
-    },
-    {
-      "name": "mahdibland/V2RayAggregator",
-      "count": 200,
+      "name": "barry-far/V2ray-Config",
+      "count": 1855,
       "status": "ok"
     },
     {
@@ -165,18 +150,33 @@
       "status": "ok"
     },
     {
-      "name": "proxypool/clash-meta-2",
-      "count": 68,
+      "name": "peasoft/NoMoreWalls",
+      "count": 42,
       "status": "ok"
     },
     {
-      "name": "clashfree/daily",
-      "count": 170,
+      "name": "xyfqzy/free-nodes",
+      "count": 0,
+      "status": "ok"
+    },
+    {
+      "name": "MatinGhanbari/v2ray-configs",
+      "count": 3996,
+      "status": "ok"
+    },
+    {
+      "name": "proxypool/clash-meta-2",
+      "count": 63,
       "status": "ok"
     },
     {
       "name": "mianfeiclash/daily",
       "count": 170,
+      "status": "ok"
+    },
+    {
+      "name": "clashfree/daily",
+      "count": 175,
       "status": "ok"
     }
   ]
