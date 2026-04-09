@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-04-09 07:11:02",
-  "total_fetched": 10399,
-  "after_prefilter": 10231,
-  "unique_nodes": 5554,
-  "alive_nodes": 1980,
+  "updated_at": "2026-04-09 12:58:54",
+  "total_fetched": 10349,
+  "after_prefilter": 10179,
+  "unique_nodes": 5595,
+  "alive_nodes": 1973,
   "country_stats": {
-    "AE": 3,
+    "AE": 2,
     "AM": 1,
     "AR": 2,
     "AT": 12,
@@ -15,86 +15,78 @@
     "BH": 1,
     "BO": 1,
     "BR": 5,
-    "CA": 15,
+    "CA": 17,
     "CH": 4,
     "CL": 2,
     "CLOUDFLARE": 30,
-    "CN": 3,
+    "CN": 1,
     "CO": 2,
     "CR": 1,
-    "CY": 7,
-    "CZ": 1,
-    "DE": 93,
+    "CY": 8,
+    "CZ": 3,
+    "DE": 84,
     "DK": 2,
     "EC": 1,
     "EE": 6,
-    "ES": 5,
+    "ES": 6,
     "FASTLY": 13,
-    "FI": 6,
-    "FR": 92,
-    "GB": 60,
-    "GOOGLE": 1,
+    "FI": 5,
+    "FR": 90,
+    "GB": 63,
     "GR": 1,
-    "HK": 106,
+    "HK": 129,
     "HR": 1,
-    "ID": 4,
+    "ID": 3,
     "IE": 1,
     "IN": 10,
-    "IR": 21,
+    "IR": 17,
     "IT": 2,
-    "JP": 25,
+    "JP": 26,
     "KH": 1,
     "KR": 20,
     "KZ": 7,
-    "LT": 5,
-    "LV": 17,
+    "LT": 4,
+    "LV": 18,
     "MA": 3,
-    "MD": 9,
+    "MD": 10,
     "MK": 1,
+    "MN": 1,
     "MT": 2,
     "MX": 2,
     "MY": 3,
-    "NL": 87,
+    "NL": 88,
     "NO": 1,
     "PA": 2,
     "PE": 3,
     "PK": 3,
-    "PL": 13,
+    "PL": 11,
     "PR": 2,
     "PT": 1,
+    "PW": 1,
     "PY": 1,
-    "RO": 2,
-    "RU": 20,
+    "RO": 3,
+    "RU": 21,
     "SA": 2,
     "SC": 5,
-    "SE": 11,
-    "SG": 32,
+    "SE": 10,
+    "SG": 37,
     "SI": 2,
-    "TR": 5,
-    "TW": 21,
-    "US": 145,
-    "VN": 249,
+    "TR": 6,
+    "TW": 25,
+    "UA": 1,
+    "US": 138,
+    "VN": 241,
     "ZA": 4
   },
   "sources": [
     {
+      "name": "Epodonios/v2ray-configs",
+      "count": 3065,
+      "status": "ok"
+    },
+    {
       "name": "Barabama/v2rayshare",
       "count": 24,
-      "status": "ok"
-    },
-    {
-      "name": "AutoMergePublicNodes",
-      "count": 37,
-      "status": "ok"
-    },
-    {
-      "name": "Barabama/wenode",
-      "count": 24,
-      "status": "ok"
-    },
-    {
-      "name": "Barabama/yudou66",
-      "count": 249,
       "status": "ok"
     },
     {
@@ -103,13 +95,23 @@
       "status": "ok"
     },
     {
-      "name": "MatinGhanbari/v2ray-configs",
-      "count": 3998,
+      "name": "mahdibland/V2RayAggregator",
+      "count": 200,
       "status": "ok"
     },
     {
-      "name": "mahdibland/V2RayAggregator",
-      "count": 200,
+      "name": "barry-far/V2ray-Config",
+      "count": 1945,
+      "status": "ok"
+    },
+    {
+      "name": "AutoMergePublicNodes",
+      "count": 37,
+      "status": "ok"
+    },
+    {
+      "name": "MatinGhanbari/v2ray-configs",
+      "count": 3996,
       "status": "ok"
     },
     {
@@ -128,13 +130,18 @@
       "status": "ok"
     },
     {
-      "name": "Epodonios/v2ray-configs",
-      "count": 3112,
+      "name": "Barabama/wenode",
+      "count": 24,
       "status": "ok"
     },
     {
-      "name": "proxypool/clash-meta",
-      "count": 44,
+      "name": "Pawdroid/sub",
+      "count": 9,
+      "status": "ok"
+    },
+    {
+      "name": "Barabama/yudou66",
+      "count": 249,
       "status": "ok"
     },
     {
@@ -143,18 +150,13 @@
       "status": "ok"
     },
     {
-      "name": "barry-far/V2ray-Config",
-      "count": 1945,
-      "status": "ok"
-    },
-    {
-      "name": "Pawdroid/sub",
-      "count": 11,
-      "status": "ok"
-    },
-    {
       "name": "xyfqzy/free-nodes",
       "count": 0,
+      "status": "ok"
+    },
+    {
+      "name": "proxypool/clash-meta",
+      "count": 44,
       "status": "ok"
     },
     {
@@ -163,13 +165,13 @@
       "status": "ok"
     },
     {
-      "name": "clashfree/daily",
-      "count": 174,
+      "name": "proxypool/clash-meta-2",
+      "count": 64,
       "status": "ok"
     },
     {
-      "name": "proxypool/clash-meta-2",
-      "count": 63,
+      "name": "clashfree/daily",
+      "count": 174,
       "status": "ok"
     }
   ]
