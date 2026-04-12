@@ -1,89 +1,81 @@
 {
-  "updated_at": "2026-04-12 01:26:19",
-  "total_fetched": 10338,
-  "after_prefilter": 10176,
-  "unique_nodes": 5578,
-  "alive_nodes": 1824,
+  "updated_at": "2026-04-12 07:04:10",
+  "total_fetched": 10399,
+  "after_prefilter": 10237,
+  "unique_nodes": 5599,
+  "alive_nodes": 1945,
   "country_stats": {
-    "AE": 2,
-    "AL": 1,
-    "AM": 2,
+    "AE": 4,
+    "AM": 1,
     "AR": 2,
     "AT": 12,
-    "AU": 5,
+    "AU": 3,
     "BE": 1,
     "BG": 4,
     "BH": 1,
     "BO": 1,
-    "BR": 4,
-    "CA": 16,
+    "BR": 2,
+    "CA": 17,
     "CH": 4,
     "CL": 2,
     "CLOUDFLARE": 30,
-    "CN": 1,
+    "CN": 2,
     "CO": 1,
     "CR": 1,
-    "CY": 7,
-    "CZ": 5,
-    "DE": 92,
+    "CY": 8,
+    "CZ": 4,
+    "DE": 95,
     "DK": 2,
     "EC": 1,
-    "EE": 8,
-    "ES": 7,
-    "FASTLY": 9,
+    "EE": 6,
+    "ES": 8,
+    "FASTLY": 12,
     "FI": 7,
-    "FR": 131,
-    "GB": 66,
-    "HK": 94,
+    "FR": 144,
+    "GB": 64,
+    "HK": 105,
     "HR": 1,
-    "HU": 1,
-    "ID": 4,
-    "IE": 2,
-    "IN": 8,
-    "IR": 16,
-    "IS": 1,
-    "IT": 1,
-    "JP": 33,
+    "ID": 3,
+    "IN": 9,
+    "IR": 28,
+    "IT": 2,
+    "JP": 30,
     "KH": 1,
-    "KR": 14,
-    "KZ": 4,
-    "LT": 3,
-    "LV": 16,
+    "KR": 19,
+    "KZ": 3,
+    "LT": 5,
+    "LV": 18,
     "MA": 3,
-    "MD": 7,
+    "MD": 8,
+    "MK": 1,
     "MN": 1,
     "MT": 2,
     "MX": 3,
     "MY": 6,
-    "NL": 85,
+    "NL": 89,
+    "NO": 1,
     "PA": 2,
     "PE": 3,
     "PK": 3,
-    "PL": 15,
+    "PL": 13,
     "PR": 1,
     "PT": 1,
-    "PW": 1,
     "PY": 1,
-    "RO": 3,
+    "RO": 4,
     "RS": 1,
-    "RU": 14,
+    "RU": 15,
     "SA": 2,
-    "SC": 6,
-    "SE": 8,
+    "SC": 7,
+    "SE": 6,
     "SG": 31,
     "SI": 2,
-    "TR": 6,
-    "TW": 14,
-    "US": 138,
-    "VN": 240,
+    "TR": 7,
+    "TW": 19,
+    "US": 136,
+    "VN": 230,
     "ZA": 4
   },
   "sources": [
-    {
-      "name": "barry-far/V2ray-Config",
-      "count": 1891,
-      "status": "ok"
-    },
     {
       "name": "mahdibland/V2RayAggregator",
       "count": 200,
@@ -95,18 +87,8 @@
       "status": "ok"
     },
     {
-      "name": "peasoft/NoMoreWalls",
-      "count": 61,
-      "status": "ok"
-    },
-    {
-      "name": "Barabama/v2rayshare",
-      "count": 24,
-      "status": "ok"
-    },
-    {
-      "name": "mfuu/v2ray",
-      "count": 208,
+      "name": "MatinGhanbari/v2ray-configs",
+      "count": 3997,
       "status": "ok"
     },
     {
@@ -116,12 +98,27 @@
     },
     {
       "name": "Barabama/wenode",
-      "count": 24,
+      "count": 26,
+      "status": "ok"
+    },
+    {
+      "name": "Epodonios/v2ray-configs",
+      "count": 3081,
+      "status": "ok"
+    },
+    {
+      "name": "Barabama/v2rayshare",
+      "count": 26,
       "status": "ok"
     },
     {
       "name": "Barabama/yudou66",
-      "count": 265,
+      "count": 260,
+      "status": "ok"
+    },
+    {
+      "name": "mfuu/v2ray",
+      "count": 184,
       "status": "ok"
     },
     {
@@ -130,18 +127,13 @@
       "status": "ok"
     },
     {
-      "name": "proxypool/clash-meta",
-      "count": 32,
+      "name": "peasoft/NoMoreWalls",
+      "count": 61,
       "status": "ok"
     },
     {
-      "name": "Epodonios/v2ray-configs",
-      "count": 3043,
-      "status": "ok"
-    },
-    {
-      "name": "Pawdroid/sub",
-      "count": 9,
+      "name": "barry-far/V2ray-Config",
+      "count": 1911,
       "status": "ok"
     },
     {
@@ -150,8 +142,8 @@
       "status": "ok"
     },
     {
-      "name": "mianfeiclash/daily",
-      "count": 167,
+      "name": "Pawdroid/sub",
+      "count": 9,
       "status": "ok"
     },
     {
@@ -160,13 +152,18 @@
       "status": "ok"
     },
     {
-      "name": "MatinGhanbari/v2ray-configs",
-      "count": 3998,
+      "name": "proxypool/clash-meta",
+      "count": 32,
+      "status": "ok"
+    },
+    {
+      "name": "mianfeiclash/daily",
+      "count": 167,
       "status": "ok"
     },
     {
       "name": "proxypool/clash-meta-2",
-      "count": 40,
+      "count": 69,
       "status": "ok"
     },
     {
