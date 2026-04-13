@@ -59,14 +59,6 @@ GitHub Actions **每 6 小时**自动运行，也支持手动触发。
 
 脚本自动识别 base64 / 纯文本格式，无需手动指定。
 
-## 本地运行
-
-```bash
-pip install pyyaml
-python fetch.py
-```
-
-## 免责声明
 ---
 
 https://github.com/cxddgtb/- 爬取
@@ -77,6 +69,10 @@ https://github.com/cxddgtb/dljdsjq 重命名加可添加日更节点
 
 https://github.com/cxddgtb/2026Clash 最终测试《包括延迟和下载》
 
+
+
+## 免责声明
+---
 
 - 本项目**仅爬取互联网公开资源**并进行聚合整理，不提供、不运营任何代理服务。
 - 项目**不对节点的可用性、安全性、速度、合法性作任何担保**。
