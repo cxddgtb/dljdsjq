@@ -69,3 +69,6 @@ sources:
   - name: "Pawdroid/sub"
     url: "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub"
     
+  - name: "cxddgtb/cxddzy"
+    url: "https://github.com/cxddgtb/cxddzy/raw/refs/heads/master/list.txt"
+    
