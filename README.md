@@ -67,6 +67,16 @@ python fetch.py
 ```
 
 ## 免责声明
+---
+
+https://github.com/cxddgtb/- 爬取
+
+https://github.com/cxddgtb/cxddzy 整合
+
+https://github.com/cxddgtb/dljdsjq 重命名加可添加日更节点
+
+https://github.com/cxddgtb/2026Clash 最终测试《包括延迟和下载》
+
 
 - 本项目**仅爬取互联网公开资源**并进行聚合整理，不提供、不运营任何代理服务。
 - 项目**不对节点的可用性、安全性、速度、合法性作任何担保**。
