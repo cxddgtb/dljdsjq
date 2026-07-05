@@ -1,96 +1,106 @@
 {
-  "updated_at": "2026-07-05 04:12:12",
-  "total_fetched": 37972,
-  "after_prefilter": 37535,
-  "unique_nodes": 18651,
-  "alive_nodes": 12222,
+  "updated_at": "2026-07-05 08:42:12",
+  "total_fetched": 37948,
+  "after_prefilter": 37494,
+  "unique_nodes": 18879,
+  "alive_nodes": 12036,
   "country_stats": {
-    "AE": 66,
+    "AE": 67,
     "AL": 24,
-    "AM": 13,
+    "AM": 11,
     "AR": 1,
     "AT": 76,
     "AU": 21,
     "BA": 1,
-    "BE": 31,
-    "BG": 20,
+    "BE": 30,
+    "BG": 21,
     "BR": 8,
-    "BY": 12,
-    "CA": 62,
-    "CH": 86,
+    "BY": 9,
+    "CA": 61,
+    "CH": 73,
     "CL": 1,
     "CLOUDFLARE": 30,
     "CLOUDFRONT": 9,
     "CN": 1,
     "CO": 5,
     "CY": 24,
-    "CZ": 61,
-    "DE": 983,
+    "CZ": 62,
+    "DE": 952,
     "DK": 6,
     "DO": 3,
-    "EE": 52,
-    "ES": 32,
+    "EE": 50,
+    "ES": 28,
     "FASTLY": 30,
     "FI": 255,
-    "FR": 381,
-    "GB": 278,
-    "GOOGLE": 11,
+    "FR": 362,
+    "GB": 268,
+    "GOOGLE": 12,
     "GR": 7,
-    "HK": 164,
+    "HK": 149,
     "HR": 1,
     "HU": 19,
-    "ID": 3,
-    "IE": 10,
-    "IL": 15,
+    "ID": 4,
+    "IE": 12,
+    "IL": 12,
     "IN": 16,
     "IQ": 2,
-    "IR": 325,
+    "IR": 299,
     "IS": 4,
-    "IT": 49,
-    "JP": 199,
+    "IT": 47,
+    "JP": 203,
     "KG": 2,
     "KR": 131,
     "KZ": 39,
-    "LT": 451,
+    "LT": 448,
     "LU": 5,
-    "LV": 122,
+    "LV": 117,
     "MD": 17,
     "MH": 16,
     "MN": 1,
     "MO": 2,
     "MX": 4,
-    "MY": 9,
-    "NL": 719,
+    "MY": 10,
+    "NL": 709,
     "NO": 4,
     "NZ": 5,
     "PA": 1,
     "PH": 3,
-    "PL": 152,
-    "RO": 81,
+    "PL": 151,
+    "RO": 80,
     "RS": 1,
-    "RU": 1298,
+    "RU": 1264,
     "SA": 5,
-    "SC": 915,
-    "SE": 237,
-    "SG": 221,
+    "SC": 914,
+    "SE": 243,
+    "SG": 217,
     "SK": 1,
     "TH": 10,
     "TJ": 1,
-    "TR": 128,
-    "TW": 50,
+    "TR": 114,
+    "TW": 44,
     "UA": 16,
-    "US": 1299,
+    "US": 1291,
     "UZ": 1,
     "VG": 1,
     "VI": 1,
     "VN": 23,
-    "ZA": 13,
-    "XX": 18
+    "ZA": 12,
+    "XX": 21
   },
   "sources": [
     {
       "name": "AutoMergePublicNodes",
-      "count": 75,
+      "count": 64,
+      "status": "ok"
+    },
+    {
+      "name": "Barabama/v2rayshare",
+      "count": 23,
+      "status": "ok"
+    },
+    {
+      "name": "mahdibland/V2RayAggregator",
+      "count": 200,
       "status": "ok"
     },
     {
@@ -104,18 +114,8 @@
       "status": "ok"
     },
     {
-      "name": "Barabama/v2rayshare",
-      "count": 23,
-      "status": "ok"
-    },
-    {
-      "name": "xyfqzy/free-nodes",
-      "count": 0,
-      "status": "ok"
-    },
-    {
-      "name": "mahdibland/V2RayAggregator",
-      "count": 200,
+      "name": "mfuu/v2ray",
+      "count": 109,
       "status": "ok"
     },
     {
@@ -124,8 +124,13 @@
       "status": "ok"
     },
     {
-      "name": "mfuu/v2ray",
-      "count": 116,
+      "name": "peasoft/NoMoreWalls",
+      "count": 162,
+      "status": "ok"
+    },
+    {
+      "name": "Epodonios/v2ray-configs",
+      "count": 6947,
       "status": "ok"
     },
     {
@@ -134,23 +139,13 @@
       "status": "ok"
     },
     {
-      "name": "peasoft/NoMoreWalls",
-      "count": 144,
-      "status": "ok"
-    },
-    {
-      "name": "Epodonios/v2ray-configs",
-      "count": 7008,
+      "name": "ermaozi/get_subscribe",
+      "count": 25,
       "status": "ok"
     },
     {
       "name": "barry-far/V2ray-Config",
-      "count": 7007,
-      "status": "ok"
-    },
-    {
-      "name": "ermaozi/get_subscribe",
-      "count": 25,
+      "count": 7053,
       "status": "ok"
     },
     {
@@ -169,8 +164,8 @@
       "status": "ok"
     },
     {
-      "name": "mianfeiclash/daily",
-      "count": 298,
+      "name": "xyfqzy/free-nodes",
+      "count": 0,
       "status": "ok"
     },
     {
@@ -179,8 +174,13 @@
       "status": "ok"
     },
     {
+      "name": "mianfeiclash/daily",
+      "count": 298,
+      "status": "ok"
+    },
+    {
       "name": "clashfree/daily",
-      "count": 675,
+      "count": 666,
       "status": "ok"
     },
     {
