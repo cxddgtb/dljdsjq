@@ -1,88 +1,93 @@
 {
-  "updated_at": "2026-09-04 22:18:36",
-  "total_fetched": 22326,
-  "after_prefilter": 21995,
-  "unique_nodes": 7605,
-  "alive_nodes": 2882,
+  "updated_at": "2026-09-05 04:07:48",
+  "total_fetched": 22275,
+  "after_prefilter": 21938,
+  "unique_nodes": 7359,
+  "alive_nodes": 2770,
   "country_stats": {
-    "AE": 15,
+    "AE": 14,
     "AL": 2,
     "AM": 1,
     "AT": 7,
-    "AU": 8,
-    "BE": 4,
-    "BG": 13,
+    "AU": 9,
+    "BE": 3,
+    "BG": 12,
     "BR": 1,
     "CA": 28,
-    "CH": 7,
+    "CH": 9,
     "CLOUDFLARE": 30,
-    "CLOUDFRONT": 8,
-    "CN": 8,
-    "CY": 14,
+    "CLOUDFRONT": 10,
+    "CN": 6,
+    "CY": 13,
     "CZ": 10,
-    "DE": 225,
+    "DE": 216,
     "DK": 1,
-    "EE": 10,
+    "EE": 8,
     "ES": 16,
     "FASTLY": 30,
-    "FI": 47,
-    "FR": 89,
-    "GB": 121,
+    "FI": 44,
+    "FR": 87,
+    "GB": 114,
     "GE": 1,
-    "GOOGLE": 3,
+    "GOOGLE": 2,
     "GR": 2,
-    "HK": 73,
+    "HK": 66,
     "HU": 1,
     "ID": 1,
     "IE": 5,
     "IL": 2,
-    "IN": 2,
-    "IR": 53,
-    "IT": 13,
-    "JP": 70,
-    "KR": 52,
+    "IN": 1,
+    "IR": 50,
+    "IT": 16,
+    "JP": 68,
+    "KR": 46,
     "KZ": 9,
-    "LT": 1,
+    "LT": 2,
     "LU": 1,
     "LV": 9,
-    "MD": 11,
+    "MD": 12,
     "MH": 2,
     "MN": 1,
     "MY": 7,
-    "NL": 157,
-    "NO": 15,
+    "NL": 152,
+    "NO": 17,
     "NZ": 2,
-    "PH": 1,
-    "PL": 26,
-    "RO": 7,
-    "RS": 11,
-    "RU": 56,
+    "PL": 28,
+    "RO": 6,
+    "RS": 12,
+    "RU": 48,
     "SA": 1,
     "SC": 5,
-    "SE": 16,
-    "SG": 87,
+    "SE": 18,
+    "SG": 88,
     "SK": 1,
-    "TH": 1,
+    "TH": 2,
     "TR": 29,
-    "TW": 19,
+    "TW": 24,
     "UA": 1,
-    "US": 405,
-    "VN": 2,
-    "ZA": 7
+    "US": 396,
+    "UZ": 1,
+    "VN": 4,
+    "ZA": 4
   },
   "sources": [
+    {
+      "name": "Barabama/v2rayshare",
+      "count": 23,
+      "status": "ok"
+    },
+    {
+      "name": "AutoMergePublicNodes",
+      "count": 179,
+      "status": "ok"
+    },
     {
       "name": "Barabama/nodefree",
       "count": 23,
       "status": "ok"
     },
     {
-      "name": "MatinGhanbari/v2ray-configs",
-      "count": 3998,
-      "status": "ok"
-    },
-    {
-      "name": "Barabama/v2rayshare",
+      "name": "Barabama/wenode",
       "count": 23,
       "status": "ok"
     },
@@ -92,18 +97,18 @@
       "status": "ok"
     },
     {
-      "name": "Epodonios/v2ray-configs",
-      "count": 7835,
-      "status": "ok"
-    },
-    {
-      "name": "Barabama/wenode",
-      "count": 23,
-      "status": "ok"
-    },
-    {
       "name": "Barabama/yudou66",
       "count": 166,
+      "status": "ok"
+    },
+    {
+      "name": "MatinGhanbari/v2ray-configs",
+      "count": 3999,
+      "status": "ok"
+    },
+    {
+      "name": "ermaozi/get_subscribe",
+      "count": 24,
       "status": "ok"
     },
     {
@@ -113,17 +118,7 @@
     },
     {
       "name": "peasoft/NoMoreWalls",
-      "count": 182,
-      "status": "ok"
-    },
-    {
-      "name": "barry-far/V2ray-Config",
-      "count": 7762,
-      "status": "ok"
-    },
-    {
-      "name": "xyfqzy/free-nodes",
-      "count": 0,
+      "count": 170,
       "status": "ok"
     },
     {
@@ -132,18 +127,18 @@
       "status": "ok"
     },
     {
-      "name": "ermaozi/get_subscribe",
-      "count": 15,
-      "status": "ok"
-    },
-    {
       "name": "proxypool/clash-meta",
       "count": 0,
       "status": "failed"
     },
     {
-      "name": "AutoMergePublicNodes",
-      "count": 182,
+      "name": "xyfqzy/free-nodes",
+      "count": 0,
+      "status": "ok"
+    },
+    {
+      "name": "Epodonios/v2ray-configs",
+      "count": 7769,
       "status": "ok"
     },
     {
@@ -154,6 +149,11 @@
     {
       "name": "Pawdroid/sub",
       "count": 20,
+      "status": "ok"
+    },
+    {
+      "name": "barry-far/V2ray-Config",
+      "count": 7768,
       "status": "ok"
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "name": "clashfree/daily",
-      "count": 1521,
+      "count": 1535,
       "status": "ok"
     }
   ]
