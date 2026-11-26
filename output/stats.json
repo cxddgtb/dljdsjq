@@ -1,86 +1,87 @@
 {
-  "updated_at": "2026-11-26 14:58:00",
-  "total_fetched": 26838,
-  "after_prefilter": 26736,
-  "unique_nodes": 13533,
-  "alive_nodes": 8045,
+  "updated_at": "2026-11-26 23:42:26",
+  "total_fetched": 26959,
+  "after_prefilter": 26869,
+  "unique_nodes": 14142,
+  "alive_nodes": 8190,
   "country_stats": {
-    "AE": 81,
-    "AL": 7,
+    "AE": 82,
+    "AL": 4,
     "AM": 8,
     "AR": 1,
     "AT": 31,
-    "AU": 22,
+    "AU": 23,
+    "AZ": 1,
     "BE": 11,
-    "BG": 48,
+    "BG": 54,
     "BR": 13,
     "BY": 10,
-    "CA": 64,
-    "CH": 81,
+    "CA": 79,
+    "CH": 85,
     "CLOUDFLARE": 30,
     "CLOUDFRONT": 30,
     "CN": 8,
-    "CY": 24,
-    "CZ": 48,
-    "DE": 868,
-    "DK": 21,
+    "CY": 30,
+    "CZ": 50,
+    "DE": 841,
+    "DK": 20,
     "DO": 1,
-    "EE": 96,
-    "ES": 65,
+    "EE": 104,
+    "ES": 66,
     "FASTLY": 30,
-    "FI": 112,
-    "FR": 184,
-    "GB": 209,
+    "FI": 118,
+    "FR": 194,
+    "GB": 219,
     "GE": 1,
     "GOOGLE": 11,
-    "GR": 14,
-    "HK": 165,
+    "GR": 15,
+    "HK": 156,
     "HR": 1,
     "HU": 13,
-    "ID": 9,
-    "IE": 18,
-    "IL": 28,
-    "IN": 21,
+    "ID": 12,
+    "IE": 19,
+    "IL": 24,
+    "IN": 24,
     "IQ": 11,
-    "IR": 261,
+    "IR": 280,
     "IS": 1,
     "IT": 43,
-    "JP": 290,
+    "JP": 277,
     "KG": 2,
-    "KR": 65,
-    "KZ": 24,
+    "KR": 69,
+    "KZ": 28,
     "LT": 31,
-    "LU": 2,
-    "LV": 51,
+    "LU": 3,
+    "LV": 52,
     "MD": 24,
     "MH": 6,
     "MN": 1,
-    "MX": 5,
+    "MX": 6,
     "MY": 7,
-    "NL": 486,
+    "NL": 490,
     "NO": 6,
     "NZ": 3,
     "PH": 3,
     "PK": 7,
-    "PL": 148,
+    "PL": 145,
     "PT": 3,
-    "RO": 36,
-    "RS": 9,
-    "RU": 707,
+    "RO": 38,
+    "RS": 15,
+    "RU": 724,
     "SA": 3,
-    "SC": 81,
-    "SE": 98,
-    "SG": 259,
+    "SC": 90,
+    "SE": 95,
+    "SG": 241,
     "SI": 8,
-    "SK": 11,
-    "TH": 11,
-    "TR": 112,
-    "TW": 21,
+    "SK": 13,
+    "TH": 14,
+    "TR": 121,
+    "TW": 24,
     "UA": 11,
-    "US": 1212,
+    "US": 1250,
     "UZ": 1,
-    "VN": 11,
-    "ZA": 7,
+    "VN": 12,
+    "ZA": 8,
     "XX": 2
   },
   "sources": [
@@ -96,12 +97,7 @@
     },
     {
       "name": "AutoMergePublicNodes",
-      "count": 310,
-      "status": "ok"
-    },
-    {
-      "name": "mahdibland/V2RayAggregator",
-      "count": 200,
+      "count": 308,
       "status": "ok"
     },
     {
@@ -110,18 +106,18 @@
       "status": "failed"
     },
     {
-      "name": "MatinGhanbari/v2ray-configs",
-      "count": 3998,
+      "name": "mahdibland/V2RayAggregator",
+      "count": 200,
       "status": "ok"
     },
     {
-      "name": "ermaozi/get_subscribe",
-      "count": 368,
-      "status": "ok"
+      "name": "Barabama/yudou66",
+      "count": 0,
+      "status": "failed"
     },
     {
-      "name": "barry-far/V2ray-Config",
-      "count": 8852,
+      "name": "peasoft/NoMoreWalls",
+      "count": 313,
       "status": "ok"
     },
     {
@@ -130,14 +126,14 @@
       "status": "failed"
     },
     {
-      "name": "peasoft/NoMoreWalls",
-      "count": 307,
+      "name": "MatinGhanbari/v2ray-configs",
+      "count": 3999,
       "status": "ok"
     },
     {
-      "name": "Barabama/yudou66",
-      "count": 0,
-      "status": "failed"
+      "name": "ermaozi/get_subscribe",
+      "count": 368,
+      "status": "ok"
     },
     {
       "name": "mfuu/v2ray",
@@ -151,7 +147,7 @@
     },
     {
       "name": "Pawdroid/sub",
-      "count": 15,
+      "count": 14,
       "status": "ok"
     },
     {
@@ -165,13 +161,18 @@
       "status": "ok"
     },
     {
+      "name": "barry-far/V2ray-Config",
+      "count": 9008,
+      "status": "ok"
+    },
+    {
       "name": "proxypool/clash-meta-2",
       "count": 57,
       "status": "ok"
     },
     {
       "name": "mianfeiclash/daily",
-      "count": 208,
+      "count": 211,
       "status": "ok"
     },
     {
@@ -181,7 +182,7 @@
     },
     {
       "name": "cxddgtb/cxddzy",
-      "count": 12501,
+      "count": 12459,
       "status": "ok"
     }
   ]
